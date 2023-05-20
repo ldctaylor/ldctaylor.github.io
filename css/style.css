@@ -72,7 +72,7 @@ a {
 
 /* Global Styles*/ 
 
-h1, h2, h3, h4, h5, h6, ol, ul, a {
+h1, h2, h3, h4, h5, h6, ol, a {
 	color: var(--1light);
 }
 
@@ -93,6 +93,7 @@ font-size: 1rem;
 color: var(--1dark);
 }
 
+
 /* This styles the heart divider area, except for image size and height (see @media) */
 #siteheader {
 	background-color: var(--1dark);
@@ -102,29 +103,37 @@ color: var(--1dark);
 	display: flex;
 	justify-content: right;
 	background-image: url("../img/heartdivider375_light.png");
-	height: 80px;
+	height: 70px;
 	padding: 5px;
 }
 
 /* Style navigation menu */
-/* #nav-menu {
-	width: 50vh;
-}*/
 
-/*#nav-menu ul {
+#navMenu ul {
 	display: flex;
 	justify-content: end;
 	align-items: center;
-} */
+	height: 100%;
+	color: var(--1light);
+}
+
+#navMenu li {
+	padding: 0% 5%;
+}
+
+#navMenu a:hover {
+	color: var(--1comp2);
+	font-weight: bold;
+}
 
 /* Styling hamburger icon. Ran out of time to finish this */
-.hamburger-icon {
+/* .hamburger-icon {
 	color: var(--1light);
 	height: 60px;
 }
 #siteheader ul {
 	display: none;
-}
+} */
 /* Styles the hero section */
 #hero {
 	background-color: var(--1dark);
@@ -350,7 +359,7 @@ color: var(--1dark);
 	justify-content: center;
 	align-items: center;
 	/* margin-top: 8%; */
-	margin-left: 20%;
+	margin-left: 10%;
 	background: 
 		linear-gradient(rgb(236,178,186,0),50%,var(--paperdark),51%,rgb(236,178,186,0)),
 		linear-gradient(to right, rgb(236,178,186,0),50%,var(--paperdark),51%,rgb(236,178,186,0)),
@@ -492,43 +501,112 @@ color: var(--1dark);
 @media (min-width: 600px) {
 
 	/* Adjust font sizing for larger screens */
-	h1 {font-size: 5rem;}
+	/* h1 {font-size: 4rem;}
 	h2 {font-size: 3rem}
-	p {font-size: 1.5rem;}
+	p {font-size: 1.5rem;} */
 
-	/* Update header area for larger screens */
-	#siteheader {
-		background-image: none;
-		height: 120px;
+
+/* Remove heart graphic from nav area and change background layout */
+#siteheader {
+	background: linear-gradient(
+		to right,
+		var(--1dark), 0%,
+		var(--1dark),50%,
+		var(--1light),50%,
+		var(--1light));
 	}
 
-	.hamburger-icon {
-		display: none;
+	#navMenu ul li a {
+		color: var(--1dark);
+		font-size: 1.2rem;
 	}
 
-	#siteheader ul {
-		display: flex;
-		justify-content: right;
-		height: 100%;
+	#navMenu li {
+		padding: 0% 10%;
 	}
 
-	/* Make my mugshot not keep growing as screen gets bigger */
-	#hero img {
-		max-width: 40%;
-	}
+	/*Layout of hero section for tablets*/
+
+#hero {
+	background: linear-gradient(
+		to right,
+		rgb(0,0,0,0), 0%,
+		rgb(0,0,0,0),50%,
+		var(--1light),50%,
+		var(--1light)), url("../img/heartdivider600_light.png"), linear-gradient(
+		to right,
+		var(--1dark), 0%,
+		var(--1dark),50%,
+		var(--1light),50%,
+		var(--1light)); /*I have overlaid a second gradient as the top gradient to remove a shading from the heart image on the RHS*/
+	background-repeat: no-repeat;
+	background-position: 30% 95%;
+	height: 400px;
+	padding: 0 0 0 5%;
+	position: relative;
+	text-align: left;
+}
+
+#hero img {
+	float: right;
+	position: absolute;
+	top: 15%;
+	right: 10%;
+	width: 30%;
+	background-color: var(--1dark);
+}
+
+#hero h1 {
+	font-weight: normal;
+	padding-top: 10%;
+}
+
+#hero h2 {
+	width: 40vh;
+	padding-top: 2%;
+	/* padding-right: 20%; */
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+/* Next few lines I commented out but don't want to delete yet */
+/* #hero {
+	height: 66vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+	text-align: left;
+	padding: 0;
+}
+
+#hero img {
+    align-self: flex-end;
+	background-color: var(--1dark);
+} */
 
 	/* Sizing of the notebook */
+.notebookPaper {
+	width: 80%;
+}
+
+/*Change layout of items on notebook to two per row*/
+#notebookContent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-top: 10%;
+}
+
+	/* Make my mugshot not keep growing as screen gets bigger */
+	/* #hero img {
+		max-width: 40%;
+	} */
+
 	#main {
 		padding-top: 60px;
 	}
-
-	/* CHECK IF THIS IS APPLIED TO CORRECT CLASS MIGHT NEED TO BE PAGE NOW */
-	.notebook {
-		width: 50%;
-	}
 	
-
-
 }
 
 
