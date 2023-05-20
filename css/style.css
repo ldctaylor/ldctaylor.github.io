@@ -463,7 +463,7 @@ color: var(--1dark);
 	text-align: center;
 	color: var(--1dark);
 }  */
-/* Tablet and desktop view */
+
 
 /* Footer styling */
  footer {
@@ -498,23 +498,22 @@ color: var(--1dark);
 	padding: 2% 5%;
  }
 
+/* Tablet and desktop view */
 @media (min-width: 600px) {
 
-	/* Adjust font sizing for larger screens */
-	/* h1 {font-size: 4rem;}
-	h2 {font-size: 3rem}
-	p {font-size: 1.5rem;} */
-
+	#main {
+		padding-top: 60px;
+	}
 
 /* Remove heart graphic from nav area and change background layout */
-#siteheader {
-	background: linear-gradient(
-		to right,
-		var(--1dark), 0%,
-		var(--1dark),50%,
-		var(--1light),50%,
-		var(--1light));
-	}
+	#siteheader {
+		background: linear-gradient(
+			to right,
+			var(--1dark), 0%,
+			var(--1dark),50%,
+			var(--1light),50%,
+			var(--1light));
+		}
 
 	#navMenu ul li a {
 		color: var(--1dark);
@@ -527,96 +526,106 @@ color: var(--1dark);
 
 	/*Layout of hero section for tablets*/
 
-#hero {
-	background: linear-gradient(
-		to right,
-		rgb(0,0,0,0), 0%,
-		rgb(0,0,0,0),50%,
-		var(--1light),50%,
-		var(--1light)), url("../img/heartdivider600_light.png"), linear-gradient(
-		to right,
-		var(--1dark), 0%,
-		var(--1dark),50%,
-		var(--1light),50%,
-		var(--1light)); /*I have overlaid a second gradient as the top gradient to remove a shading from the heart image on the RHS*/
-	background-repeat: no-repeat;
-	background-position: 30% 95%;
-	height: 400px;
-	padding: 0 0 0 5%;
-	position: relative;
-	text-align: left;
-}
+	#hero {
+		background: linear-gradient(
+			to right,
+			rgb(0,0,0,0), 0%,
+			rgb(0,0,0,0),50%,
+			var(--1light),50%,
+			var(--1light)), url("../img/heartdivider600_light.png"), linear-gradient(
+			to right,
+			var(--1dark), 0%,
+			var(--1dark),50%,
+			var(--1light),50%,
+			var(--1light)); /*I have overlaid a second gradient as the top gradient to remove a shading from the heart image on the RHS*/
+		background-repeat: no-repeat;
+		background-position: 30% 95%;
+		height: 400px;
+		padding: 0 0 0 5%;
+		position: relative;
+		text-align: left;
+	}
 
-#hero img {
-	float: right;
-	position: absolute;
-	top: 15%;
-	right: 10%;
-	width: 30%;
-	background-color: var(--1dark);
-}
+	#hero img {
+		float: right;
+		position: absolute;
+		top: 15%;
+		right: 10%;
+		width: 30%;
+		background-color: var(--1dark);
+	}
 
-#hero h1 {
-	font-weight: normal;
-	padding-top: 10%;
-}
+	#hero h1 {
+		font-weight: normal;
+		padding-top: 10%;
+	}
 
-#hero h2 {
-	width: 40vh;
-	padding-top: 2%;
-	/* padding-right: 20%; */
-	font-size: 1.4rem;
-	font-weight: 400;
-}
+	#hero h2 {
+		width: 40vw;
+		padding-top: 2%;
+		/* padding-right: 20%; */
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
 
-/* Next few lines I commented out but don't want to delete yet */
-/* #hero {
-	height: 66vh;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-	text-align: left;
-	padding: 0;
-}
-
-#hero img {
-    align-self: flex-end;
-	background-color: var(--1dark);
-} */
-
-	/* Sizing of the notebook */
-.notebookPaper {
-	width: 80%;
-}
+/* Sizing of the notebook */
+	.notebookPaper {
+		width: 75%;
+	}
 
 /*Change layout of items on notebook to two per row*/
-#notebookContent {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
-	padding-top: 10%;
-}
-
-	/* Make my mugshot not keep growing as screen gets bigger */
-	/* #hero img {
-		max-width: 40%;
-	} */
-
-	#main {
-		padding-top: 60px;
+	#notebookContent {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		width: 100%;
+		padding-top: 10%;
 	}
 	
 }
 
 
-
 /*Desktop view*/
+@media (min-width: 768px) {
 
-
-/* @media (min-width: 768px) {
-	#siteheader {
-		background-image: url("../img/heartdivider600_light.png");
-		height: 140px;
+	#navMenu li {
+		padding: 0% 15%;
 	}
-} */
+	
+	#hero {
+	background-position: 30% 98%;
+	}
+
+	#hero img {
+		max-width: 20%;
+		top: 5%;
+		right: 15%;
+	}
+
+	#hero h1 {
+		font-weight: normal;
+		padding-top: 3%;
+		font-size: 3rem;
+	}
+	
+	#hero h2 {
+		width: 40vw;
+		padding-top: 2%;
+		/* padding-right: 20%; */
+		font-size: 2rem;
+		font-weight: 400;
+	}
+	
+	#intro {
+		padding-top: 3%;
+		padding-bottom: 8%;
+	}
+	#intro p {
+		font-size: 1.5rem;
+	}
+
+	.notebookPaper {
+		width: 60%;
+	}
+}
