@@ -148,6 +148,10 @@ color: var(--1dark);
 	margin-bottom: 15px;
 }
 
+#hero .desktopImg {
+	display: none;
+}
+
 /* Styles the intro section */
 #intro {
 	width: 90%;
@@ -532,7 +536,7 @@ color: var(--1dark);
 			rgb(0,0,0,0), 0%,
 			rgb(0,0,0,0),50%,
 			var(--1light),50%,
-			var(--1light)), url("../img/heartdivider600_light.png"), linear-gradient(
+			var(--1light)), url("../img/heartdivider375_light.png"), linear-gradient(
 			to right,
 			var(--1dark), 0%,
 			var(--1dark),50%,
@@ -540,19 +544,38 @@ color: var(--1dark);
 			var(--1light)); /*I have overlaid a second gradient as the top gradient to remove a shading from the heart image on the RHS*/
 		background-repeat: no-repeat;
 		background-position: 30% 95%;
-		height: 400px;
+		height: 350px;
 		padding: 0 0 0 5%;
 		position: relative;
 		text-align: left;
 	}
-
+/* 
 	#hero img {
 		float: right;
 		position: absolute;
-		top: 15%;
-		right: 10%;
-		width: 30%;
+		top: 12%;
+		right: 12%;
+		width: 200px;
 		background-color: var(--1dark);
+	} */
+
+	#hero .mobileImg {
+		display: none;
+	}
+
+	#hero .desktopImg {
+		display: inline-block;
+		/* float: right; */
+		position: absolute;
+		left: 75%;
+		margin-left: -140px; 
+		top: 50%;
+		margin-top: -140px;
+		/* right: 10%;
+		top: 3%; */
+		background-color: var(--1dark);
+		width: 280px;
+		transform: translateY(-6%);
 	}
 
 	#hero h1 {
@@ -564,7 +587,7 @@ color: var(--1dark);
 		width: 40vw;
 		padding-top: 2%;
 		/* padding-right: 20%; */
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 		font-weight: 400;
 	}
 
@@ -593,19 +616,47 @@ color: var(--1dark);
 		padding: 0% 15%;
 	}
 	
+	/*only background-position and the image file differ from the tablet view, but had to reproduce all the background attributes or the other attributes aren't applied*/
 	#hero {
 	background-position: 30% 98%;
+	background: linear-gradient(
+			to right,
+			rgb(0,0,0,0), 0%,
+			rgb(0,0,0,0),50%,
+			var(--1light),50%,
+			var(--1light)), url("../img/heartdivider600_light.png"), linear-gradient(
+			to right,
+			var(--1dark), 0%,
+			var(--1dark),50%,
+			var(--1light),50%,
+			var(--1light));
+			background-repeat: no-repeat;
+			background-position: 30% 95%;
+			height: 350px;
+			padding: 0 0 0 5%;
+			position: relative;
+			text-align: left;
 	}
 
-	#hero img {
-		max-width: 20%;
-		top: 5%;
-		right: 15%;
+	
+	/* #hero img {
+		width: 300px;
+		top: 0;
+		right: 13%;
+	} */
+
+	#hero .desktopImg {
+		left: 75%;
+		margin-left: -150px; 
+		top: 50%;
+		margin-top: -150px;
+		width: 300px;
+		transform: translateY(-6%);
 	}
 
 	#hero h1 {
 		font-weight: normal;
-		padding-top: 3%;
+		padding-top: 1%;
 		font-size: 3rem;
 	}
 	
@@ -613,7 +664,7 @@ color: var(--1dark);
 		width: 40vw;
 		padding-top: 2%;
 		/* padding-right: 20%; */
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 400;
 	}
 	
@@ -627,5 +678,12 @@ color: var(--1dark);
 
 	.notebookPaper {
 		width: 60%;
+	}
+}
+
+/* Image fix for super wide screens */
+@media (min-width: 900px) {
+	#hero img {
+		right: 15%;
 	}
 }
