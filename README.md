@@ -1,6 +1,6 @@
 ### Leah Taylor portfolio task
 
-[Leah Taylor Portfolio Site](link to site)
+[Leah Taylor Portfolio Site](https://ldctaylor.github.io/)
 
 ## Project Requirements
 
