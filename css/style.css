@@ -93,7 +93,6 @@ font-size: 1rem;
 color: var(--1dark);
 }
 
-
 /* This styles the heart divider area, except for image size and height (see @media) */
 #siteheader {
 	background-color: var(--1dark);
@@ -259,6 +258,10 @@ margin: auto auto 1rem;
 	margin-bottom: 2rem;
 }
 
+#contentPage #notebookContent h2, p {
+	z-index: 2;
+}
+
 #contentpage .notebookPaper {
 	border-radius: 0 1% 45px/25px 0;
 	overflow: hidden;
@@ -277,11 +280,9 @@ margin: auto auto 1rem;
 	transform: skewX(-45deg);
 }
 
-/* #contentpage .notebookPaper {
-
-	border-radius: 0 0 30px/45px 0;
-	overflow: hidden;
-} */
+#contentpage #notebookContent p a:hover{
+	color: var(--1comp2);
+}
 
 
 /* Styling the post-it notes */
@@ -300,7 +301,10 @@ margin: auto auto 1rem;
 	font-family: 'Permanent Marker', 'Brush Script MT', cursive;
 	font-size: 2rem;
 	text-align: center;
-	
+}
+
+.item {
+	transition: all 0.3s ease;
 }
 
 .postit::before {
@@ -540,7 +544,7 @@ margin: auto auto 1rem;
 	font-size: 1rem;
  }
 
- footer a:hover {
+footer a:hover {
 	color: var(--1comp2);
  }
 
@@ -687,7 +691,7 @@ margin: auto auto 1rem;
 }
 
 #contentpage p {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	margin-bottom: 3rem;
 }
 
